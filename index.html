@@ -161,6 +161,7 @@ footer{background:#0b1929;color:#d5dce4;text-align:center;padding:28px;font-size
 </section>
 
 <section class="cta">
+
 <h2>Mulai Rencanakan Masa Depanmu</h2>
 <p>Temukan informasi dan persiapkan perjalanan menuju kampus impian bersama UNIKA.</p><br>
 <a href="#kampus" class="btn">Mulai Jelajahi</a>
@@ -188,6 +189,87 @@ function cariKampus() {
     }
   });
 }
+  function cariJurusan() {
+  const kataKunci = document.getElementById("searchJurusan").value.toLowerCase();
+  const bidang = document.getElementById("bidangJurusan").value;
+  const daftar = document.querySelectorAll("#hasilJurusan .card");
+
+  daftar.forEach(function(jurusan) {
+    const nama = jurusan.querySelector("h3").textContent.toLowerCase();
+    const jenis = jurusan.getAttribute("data-bidang");
+
+    if (nama.includes(kataKunci) && (bidang === "semua" || bidang === jenis)) {
+      jurusan.style.display = "block";
+    } else {
+      jurusan.style.display = "none";
+    }
+  });
+}
 </script>
+
+  <section id="jurusan">
+  <h2 class="section-title">Temukan Jurusan Impianmu</h2>
+  <p class="subtitle">Cari program studi sesuai minat dan cita-citamu.</p>
+
+  <div class="search-box">
+    <input type="text" id="searchJurusan"
+      placeholder="Cari nama jurusan...">
+
+    <select id="bidangJurusan">
+      <option value="semua">Semua Bidang</option>
+      <option value="Kesehatan">Kesehatan</option>
+      <option value="Teknik">Teknik</option>
+      <option value="Ekonomi">Ekonomi</option>
+      <option value="Sosial">Sosial dan Humaniora</option>
+      <option value="Sains">Sains</option>
+    </select>
+
+    <button onclick="cariJurusan()">Cari Jurusan</button>
+  </div>
+
+  <div class="grid" id="hasilJurusan">
+    <div class="card" data-bidang="Kesehatan">
+      <div class="icon">💊</div>
+      <h3>Farmasi</h3>
+      <p>Kesehatan</p>
+    </div>
+
+    <div class="card" data-bidang="Kesehatan">
+      <div class="icon">🩺</div>
+      <h3>Kedokteran</h3>
+      <p>Kesehatan</p>
+    </div>
+
+    <div class="card" data-bidang="Kesehatan">
+      <div class="icon">🥗</div>
+      <h3>Ilmu Gizi</h3>
+      <p>Kesehatan</p>
+    </div>
+
+    <div class="card" data-bidang="Teknik">
+      <div class="icon">⚙️</div>
+      <h3>Teknik Informatika</h3>
+      <p>Teknik</p>
+    </div>
+
+    <div class="card" data-bidang="Ekonomi">
+      <div class="icon">📊</div>
+      <h3>Manajemen</h3>
+      <p>Ekonomi</p>
+    </div>
+
+    <div class="card" data-bidang="Sosial">
+      <div class="icon">⚖️</div>
+      <h3>Ilmu Hukum</h3>
+      <p>Sosial dan Humaniora</p>
+    </div>
+
+    <div class="card" data-bidang="Sains">
+      <div class="icon">🔬</div>
+      <h3>Biologi</h3>
+      <p>Sains</p>
+    </div>
+  </div>
+</section>
 </body>
 </html>
