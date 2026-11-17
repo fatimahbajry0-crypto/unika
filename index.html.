@@ -6,54 +6,39 @@
 <title>UNIKA - Universitas Akademika</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;color:#293747;background:#f8f9fb;line-height:1.7}
-header{background:#14283f;color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0}
-.logo{font-family:Georgia,serif;font-size:28px;letter-spacing:3px}
-.logo span{color:#c4a58d}
-nav a{color:white;text-decoration:none;margin-left:20px;font-size:13px}
-.hero{padding:90px 9%;background:linear-gradient(120deg,#e7ebef,#f6f2ee)}
-.eyebrow{color:#987b68;letter-spacing:3px;font-size:11px;font-weight:bold}
-.hero h1{font-family:Georgia,serif;color:#14283f;font-size:clamp(38px,6vw,62px);line-height:1.2;margin:18px 0;max-width:700px}
-.hero h1 span{color:#987b68}
-.hero p{max-width:600px;color:#596879}
-.btn{display:inline-block;margin-top:25px;padding:12px 25px;background:#14283f;color:white;text-decoration:none;border-radius:4px}
-section{padding:70px 9%}
-.heading{text-align:center;margin-bottom:35px}
-.heading h2{font-family:Georgia,serif;font-size:35px;color:#14283f;margin:10px 0}
-.heading p{color:#697887}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:white;padding:27px;border:1px solid #e1e5e9;border-radius:7px}
-.card h3{font-family:Georgia,serif;color:#987b68;margin-bottom:10px}
-.card p{font-size:14px;color:#647382}
-.number{color:#b39b88;font-size:12px;letter-spacing:2px}
-.features{background:#eef1f4}
-.features .grid{grid-template-columns:repeat(4,1fr)}
-.features .card{min-height:170px}
-.tag{display:inline-block;background:#e9edf1;color:#14283f;padding:10px 17px;margin:7px;border-radius:25px;font-size:13px}
-.parent{background:#e7ebef}
-.parent .grid{grid-template-columns:1fr 1fr}
-.parent .card{line-height:2}
-.cta{text-align:center;background:#f5f1ed}
-footer{background:#14283f;color:#dce2e8;padding:35px 9%;text-align:center}
-footer h2{font-family:Georgia,serif;color:white;letter-spacing:4px}
-@media(max-width:700px){
-header{flex-direction:column;gap:12px}
-nav{display:flex;flex-wrap:wrap;justify-content:center}
-nav a{margin:5px 9px}
-section{padding:55px 6%}
-.hero{padding:65px 7%}
-.grid,.features .grid,.parent .grid{grid-template-columns:1fr}
-.heading h2{font-size:29px}
-}
+body{font-family:Arial,sans-serif;color:#263342;background:#f7f8fa;line-height:1.6}
+header{background:#10243b;color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+.logo{font-size:27px;font-weight:bold;letter-spacing:3px}
+.logo span{color:#c2a98b}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:14px}
+.hero{padding:85px 8%;background:linear-gradient(120deg,#10243b,#344b62);color:white}
+.hero h1{font-size:clamp(32px,5vw,52px);max-width:700px;line-height:1.2}
+.hero p{margin:20px 0;max-width:580px;color:#e0e5eb}
+.btn{display:inline-block;background:#c2a98b;color:#10243b;padding:12px 22px;border-radius:5px;text-decoration:none;font-weight:bold}
+section{padding:60px 8%}
+.section-title{text-align:center;font-size:30px;color:#10243b;margin-bottom:12px}
+.subtitle{text-align:center;color:#697586;margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.card{background:white;padding:25px;border:1px solid #e1e5e9;border-radius:10px;box-shadow:0 4px 14px #10243b0b}
+.card h3{color:#10243b;margin-bottom:10px}
+.card p{color:#687484;font-size:14px}
+.icon{font-size:30px;margin-bottom:12px}
+#fitur{background:#edf0f3}
+.parent{background:#10243b;color:white}
+.parent .section-title{color:white}
+.parent .subtitle{color:#d2d9e0}
+.cta{text-align:center;background:#e9e5df}
+.cta h2{color:#10243b;margin-bottom:12px}
+footer{background:#0b1929;color:#d5dce4;text-align:center;padding:28px;font-size:13px}
+@media(max-width:600px){header{justify-content:center}nav{justify-content:center}.hero{padding:65px 7%}section{padding:45px 7%}}
 </style>
 </head>
 <body>
-
 <header>
 <div class="logo">UNI<span>KA</span></div>
 <nav>
-<a href="#home">Beranda</a>
+<a href="#beranda">Beranda</a>
 <a href="#kampus">Kampus</a>
 <a href="#fitur">Fitur</a>
 <a href="#jurusan">Jurusan</a>
@@ -61,87 +46,73 @@ section{padding:55px 6%}
 </nav>
 </header>
 
-<main>
-<div class="hero" id="home">
-<div class="eyebrow">UNIVERSITAS AKADEMIKA</div>
-<h1>Langkah Awal Menuju <span>Kampus Impian</span></h1>
-<p>Temukan informasi perguruan tinggi, jurusan, jalur masuk, beasiswa, dan persiapan kuliah dalam satu platform. UNIKA hadir untuk membantu siswa dan orang tua merencanakan masa depan pendidikan.</p>
-<a class="btn" href="#fitur">Jelajahi UNIKA</a>
+<div class="hero" id="beranda">
+<h1>Langkah Awal Menuju Kampus Impian</h1>
+<p>Temukan informasi perguruan tinggi, jurusan, jalur masuk, beasiswa, dan persiapan kuliah dalam satu platform pendidikan.</p>
+<a href="#kampus" class="btn">Jelajahi Kampus</a>
 </div>
 
 <section id="kampus">
-<div class="heading">
-<div class="eyebrow">JELAJAHI PILIHANMU</div>
-<h2>Kenali Perguruan Tinggi</h2>
-<p>Temukan berbagai pilihan pendidikan tinggi di Indonesia dan dunia.</p>
-</div>
+<h2 class="section-title">Kenali Pilihan Kampusmu</h2>
+<p class="subtitle">Jelajahi berbagai pilihan perguruan tinggi di Indonesia dan luar negeri.</p>
 <div class="grid">
-<div class="card"><div class="number">01 / PTN</div><h3>Perguruan Tinggi Negeri</h3><p>Kenali universitas negeri, program studi, fasilitas, dan jalur seleksi masuk.</p></div>
-<div class="card"><div class="number">02 / PTS</div><h3>Perguruan Tinggi Swasta</h3><p>Jelajahi kampus swasta berdasarkan jurusan, kualitas pendidikan, dan fasilitas.</p></div>
-<div class="card"><div class="number">03 / PTLN</div><h3>Perguruan Tinggi Luar Negeri</h3><p>Kenali kesempatan kuliah internasional dan persiapan yang diperlukan.</p></div>
+<div class="card"><div class="icon">🏛️</div><h3>PTN</h3><p>Perguruan Tinggi Negeri dengan berbagai pilihan program studi dan jalur seleksi.</p></div>
+<div class="card"><div class="icon">🎓</div><h3>PTS</h3><p>Kenali perguruan tinggi swasta dan program pendidikan yang tersedia.</p></div>
+<div class="card"><div class="icon">🌏</div><h3>PTLN</h3><p>Jelajahi kesempatan melanjutkan pendidikan di luar negeri.</p></div>
 </div>
 </section>
 
-<section class="features" id="fitur">
-<div class="heading">
-<div class="eyebrow">LAYANAN UNIKA</div>
-<h2>Fitur untuk Persiapan Kuliah</h2>
-<p>Berbagai informasi untuk membantumu menentukan pilihan.</p>
-</div>
+<section id="fitur">
+<h2 class="section-title">Fitur UNIKA</h2>
+<p class="subtitle">Bantuan untuk merencanakan perjalanan pendidikanmu.</p>
 <div class="grid">
-<div class="card"><h3>Pencarian Kampus</h3><p>Temukan kampus berdasarkan lokasi dan jenis perguruan tinggi.</p></div>
-<div class="card"><h3>Pencarian Jurusan</h3><p>Kenali jurusan berdasarkan bidang dan minat.</p></div>
-<div class="card"><h3>Jalur Masuk</h3><p>Pelajari SNBP, SNBT, Mandiri, dan jalur lainnya.</p></div>
-<div class="card"><h3>Cek Peluang</h3><p>Kenali faktor yang perlu dipertimbangkan saat memilih kampus.</p></div>
-<div class="card"><h3>Informasi Beasiswa</h3><p>Pelajari jenis bantuan pendidikan dan persyaratannya.</p></div>
-<div class="card"><h3>Kuliah Luar Negeri</h3><p>Kenali persiapan studi di berbagai negara.</p></div>
-<div class="card"><h3>Tes Minat Bakat</h3><p>Eksplorasi minat untuk membantu memilih bidang studi.</p></div>
-<div class="card"><h3>Direktori Kos</h3><p>Pelajari pilihan tempat tinggal di sekitar kampus.</p></div>
+<div class="card"><div class="icon">🔎</div><h3>Pencarian Kampus</h3><p>Temukan kampus berdasarkan nama dan jenis perguruan tinggi.</p></div>
+<div class="card"><div class="icon">📚</div><h3>Pencarian Jurusan</h3><p>Kenali bidang studi dan pilihan program pendidikan.</p></div>
+<div class="card"><div class="icon">📝</div><h3>Jalur Masuk</h3><p>Pelajari berbagai jalur penerimaan mahasiswa baru.</p></div>
+<div class="card"><div class="icon">📊</div><h3>Cek Peluang</h3><p>Persiapkan pilihan kampus berdasarkan data dan hasil belajarmu.</p></div>
+<div class="card"><div class="icon">🏅</div><h3>Beasiswa</h3><p>Kenali informasi program bantuan pendidikan.</p></div>
+<div class="card"><div class="icon">✈️</div><h3>Kuliah Luar Negeri</h3><p>Temukan informasi awal tentang studi internasional.</p></div>
+<div class="card"><div class="icon">🧭</div><h3>Tes Minat Bakat</h3><p>Kenali minat dan bidang yang ingin kamu pelajari.</p></div>
+<div class="card"><div class="icon">🏠</div><h3>Direktori Kos</h3><p>Rencanakan kebutuhan tempat tinggal selama kuliah.</p></div>
 </div>
 </section>
 
 <section id="jurusan">
-<div class="heading">
-<div class="eyebrow">TEMUKAN MINATMU</div>
-<h2>Bidang Program Studi</h2>
-<p>Jelajahi bidang pendidikan yang menarik untuk dipelajari.</p>
-</div>
-<div style="text-align:center">
-<span class="tag">Kesehatan</span><span class="tag">Kedokteran</span>
-<span class="tag">Farmasi</span><span class="tag">Gizi</span>
-<span class="tag">Teknik</span><span class="tag">Ekonomi</span>
-<span class="tag">Hukum</span><span class="tag">Pendidikan</span>
-<span class="tag">Komunikasi</span><span class="tag">Sains</span>
-<span class="tag">Seni dan Desain</span>
+<h2 class="section-title">Jelajahi Bidang Jurusan</h2>
+<p class="subtitle">Kenali berbagai bidang ilmu sebelum menentukan pilihan.</p>
+<div class="grid">
+<div class="card"><h3>Kesehatan</h3><p>Farmasi, Gizi, Keperawatan, Kesehatan Masyarakat.</p></div>
+<div class="card"><h3>Kedokteran</h3><p>Kedokteran dan bidang ilmu kesehatan terkait.</p></div>
+<div class="card"><h3>Teknik</h3><p>Informatika, Sipil, Industri, Elektro.</p></div>
+<div class="card"><h3>Ekonomi</h3><p>Manajemen, Akuntansi, Ekonomi Pembangunan.</p></div>
+<div class="card"><h3>Hukum</h3><p>Ilmu Hukum dan kajian kebijakan.</p></div>
+<div class="card"><h3>Pendidikan</h3><p>Berbagai program studi keguruan dan pendidikan.</p></div>
+<div class="card"><h3>Komunikasi</h3><p>Ilmu Komunikasi, Jurnalistik, dan Hubungan Masyarakat.</p></div>
+<div class="card"><h3>Sains dan Desain</h3><p>Biologi, Kimia, Matematika, Seni, dan Desain.</p></div>
 </div>
 </section>
 
 <section class="parent" id="orangtua">
-<div class="heading">
-<div class="eyebrow">LAYANAN KELUARGA</div>
-<h2>Informasi untuk Orang Tua</h2>
-<p>Mendampingi keluarga dalam merencanakan pendidikan tinggi.</p>
-</div>
+<h2 class="section-title">Informasi untuk Orang Tua</h2>
+<p class="subtitle">Mendampingi keluarga dalam merencanakan pendidikan tinggi.</p>
 <div class="grid">
-<div class="card"><h3>Perencanaan Biaya</h3><p>Informasi biaya kuliah dan perencanaan anggaran pendidikan.</p></div>
-<div class="card"><h3>Informasi Beasiswa</h3><p>Mengenal kesempatan bantuan biaya pendidikan.</p></div>
-<div class="card"><h3>Biaya Hidup</h3><p>Gambaran kebutuhan sehari-hari mahasiswa.</p></div>
-<div class="card"><h3>Lingkungan Kampus</h3><p>Informasi fasilitas, lingkungan, dan keamanan kampus.</p></div>
+<div class="card"><h3>Biaya Kuliah</h3><p>Kenali komponen biaya pendidikan dan perencanaannya.</p></div>
+<div class="card"><h3>Beasiswa</h3><p>Pelajari pilihan dukungan pembiayaan pendidikan.</p></div>
+<div class="card"><h3>Biaya Hidup</h3><p>Pertimbangkan kebutuhan hidup selama masa perkuliahan.</p></div>
+<div class="card"><h3>Lingkungan Kampus</h3><p>Kenali lingkungan belajar dan fasilitas kampus.</p></div>
 </div>
 </section>
 
 <section class="cta">
-<div class="eyebrow">MASA DEPANMU DIMULAI DI SINI</div>
-<h2 style="font-family:Georgia,serif;color:#14283f;margin-top:12px">Temukan Pilihan Terbaik untuk Masa Depanmu</h2>
-<a class="btn" href="#kampus">Mulai Jelajahi</a>
+<h2>Mulai Rencanakan Masa Depanmu</h2>
+<p>Temukan informasi dan persiapkan perjalanan menuju kampus impian bersama UNIKA.</p><br>
+<a href="#kampus" class="btn">Mulai Jelajahi</a>
 </section>
-</main>
 
 <footer>
-<h2>UNIKA</h2>
-<p>Universitas Akademika</p>
-<p>Teman eksplorasi pendidikan tinggi.</p>
-<p style="font-size:11px;margin-top:15px">Informasi perlu diperiksa melalui sumber resmi perguruan tinggi.</p>
+<p><strong>UNIKA – Universitas Akademika</strong></p>
+<p>Platform informasi dan eksplorasi pendidikan tinggi.</p>
+<p>© 2026 UNIKA. Semua hak cipta dilindungi.</p>
 </footer>
 </body>
 </html>
