@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNIKA | Universitas Akademika</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #263442;
+      background: #f7f8fa;
+    }
+    header {
+      background: #14283f;
+      color: white;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h2 { margin: 0; letter-spacing: 3px; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+    .hero {
+      padding: 85px 9%;
+      background: linear-gradient(120deg,#e8edf2,#f8f6f3);
+      min-height: 430px;
+    }
+    .hero small { color: #987b68; letter-spacing: 3px; }
+    .hero h1 {
+      color: #14283f;
+      font-family: Georgia, serif;
+      font-size: 52px;
+      max-width: 650px;
+    }
+    .hero p { max-width: 570px; line-height: 1.8; }
+    .btn {
+      display: inline-block;
+      background: #14283f;
+      color: white;
+      padding: 13px 24px;
+      text-decoration: none;
+      margin-top: 15px;
+      border-radius: 4px;
+    }
+    section { padding: 65px 9%; }
+    h2 { color: #14283f; font-family: Georgia,serif; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border: 1px solid #e1e5e9;
+      border-radius: 6px;
+    }
+    .card h3 { color: #987b68; }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 15px;
+    }
+    .features .card { min-height: 145px; }
+    .parents {
+      background: #e9edf1;
+      line-height: 2;
+    }
+    footer {
+      background: #14283f;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+    @media(max-width:700px) {
+      header { align-items: flex-start; flex-direction: column; gap: 15px; }
+      nav a { margin: 0 12px 0 0; }
+      .hero h1 { font-size: 39px; }
+      .cards { grid-template-columns: 1fr; }
+      .features { grid-template-columns: repeat(2,1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>UNIKA</h2>
+  <nav>
+    <a href="#kampus">Kampus</a>
+    <a href="#fitur">Fitur</a>
+    <a href="#orangtua">Orang Tua</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <small>TEMUKAN MASA DEPANMU</small>
+  <h1>Langkah Awal Menuju Kampus Impian</h1>
+  <p>
+    UNIKA (Universitas Akademika) merupakan platform
+    informasi pendidikan tinggi untuk membantu siswa
+    dan orang tua mengenal kampus, jurusan, beasiswa,
+    serta persiapan memasuki dunia perkuliahan.
+  </p>
+  <a href="#fitur" class="btn">Jelajahi UNIKA</a>
+</div>
+
+<section id="kampus">
+  <h2>Jelajahi Perguruan Tinggi</h2>
+  <p>Kenali berbagai pilihan perguruan tinggi.</p>
+  <div class="cards">
+    <div class="card">
+      <h3>PTN</h3>
+      <p>Perguruan Tinggi Negeri dan informasi jalur seleksinya.</p>
+    </div>
+    <div class="card">
+      <h3>PTS</h3>
+      <p>Perguruan Tinggi Swasta dan pilihan program studinya.</p>
+    </div>
+    <div class="card">
+      <h3>PTLN</h3>
+      <p>Perguruan Tinggi Luar Negeri dan persiapan studi internasional.</p>
+    </div>
+  </div>
+</section>
+
+<section id="fitur">
+  <h2>Fitur UNIKA</h2>
+  <div class="features">
+    <div class="card"><h3>Cari Jurusan</h3><p>Temukan jurusan sesuai minat.</p></div>
+    <div class="card"><h3>Jalur Masuk</h3><p>Kenali SNBP, SNBT, dan Mandiri.</p></div>
+    <div class="card"><h3>Cek Peluang</h3><p>Pelajari pertimbangan memilih kampus.</p></div>
+    <div class="card"><h3>Beasiswa</h3><p>Kenali informasi bantuan pendidikan.</p></div>
+    <div class="card"><h3>Kuliah Luar Negeri</h3><p>Pelajari persiapan studi internasional.</p></div>
+    <div class="card"><h3>Kehidupan Kampus</h3><p>Kenali fasilitas dan lingkungan kampus.</p></div>
+    <div class="card"><h3>Tes Minat Bakat</h3><p>Eksplorasi bidang yang kamu sukai.</p></div>
+    <div class="card"><h3>Direktori Kos</h3><p>Kenali pilihan tempat tinggal mahasiswa.</p></div>
+  </div>
+</section>
+
+<section class="parents" id="orangtua">
+  <h2>Informasi untuk Orang Tua</h2>
+  <p>✓ Perencanaan biaya pendidikan</p>
+  <p>✓ Informasi beasiswa</p>
+  <p>✓ Gambaran biaya hidup mahasiswa</p>
+  <p>✓ Panduan memilih kampus dan jurusan</p>
+  <p>✓ Informasi lingkungan dan fasilitas kampus</p>
+</section>
+
+<footer>
+  <h2 style="color:white">UNIKA</h2>
+  <p>Universitas Akademika</p>
+  <p>Temukan pilihan pendidikan tinggi untuk masa depanmu.</p>
+</footer>
+
+</body>
+</html>
