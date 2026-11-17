@@ -62,7 +62,64 @@ footer{background:#0b1929;color:#d5dce4;text-align:center;padding:28px;font-size
 </div>
 </section>
 
-<section id="fitur">
+<section id="fitur"> 
+  <section id="kampus">
+  <h2 class="section-title">Cari Kampus Impianmu</h2>
+  <p class="subtitle">
+    Temukan perguruan tinggi sesuai pilihanmu.
+  </p>
+
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchKampus"
+      placeholder="Ketik nama kampus..."
+    >
+
+    <select id="jenisKampus">
+      <option value="semua">Semua Jenis Kampus</option>
+      <option value="PTN">PTN</option>
+      <option value="PTS">PTS</option>
+      <option value="PTLN">PTLN</option>
+    </select>
+
+    <button onclick="cariKampus()">Cari Kampus</button>
+  </div>
+
+  <div class="grid" id="hasilKampus">
+
+    <div class="card" data-jenis="PTN">
+      <div class="icon">🏛️</div>
+      <h3>Universitas Indonesia</h3>
+      <p>PTN</p>
+    </div>
+
+    <div class="card" data-jenis="PTN">
+      <div class="icon">🎓</div>
+      <h3>Universitas Gadjah Mada</h3>
+      <p>PTN</p>
+    </div>
+
+    <div class="card" data-jenis="PTN">
+      <div class="icon">🏫</div>
+      <h3>Institut Teknologi Bandung</h3>
+      <p>PTN</p>
+    </div>
+
+    <div class="card" data-jenis="PTS">
+      <div class="icon">🎓</div>
+      <h3>Universitas Bina Nusantara</h3>
+      <p>PTS</p>
+    </div>
+
+    <div class="card" data-jenis="PTLN">
+      <div class="icon">🌏</div>
+      <h3>Monash University</h3>
+      <p>PTLN</p>
+    </div>
+
+  </div>
+</section>
 <h2 class="section-title">Fitur UNIKA</h2>
 <p class="subtitle">Bantuan untuk merencanakan perjalanan pendidikanmu.</p>
 <div class="grid">
@@ -114,5 +171,23 @@ footer{background:#0b1929;color:#d5dce4;text-align:center;padding:28px;font-size
 <p>Platform informasi dan eksplorasi pendidikan tinggi.</p>
 <p>© 2026 UNIKA. Semua hak cipta dilindungi.</p>
 </footer>
+<script>
+function cariKampus() {
+  const kataKunci = document.getElementById("searchKampus").value.toLowerCase();
+  const jenis = document.getElementById("jenisKampus").value;
+  const daftarKampus = document.querySelectorAll("#hasilKampus .card");
+
+  daftarKampus.forEach(function(kampus) {
+    const nama = kampus.querySelector("h3").textContent.toLowerCase();
+    const tipe = kampus.getAttribute("data-jenis");
+
+    if (nama.includes(kataKunci) && (jenis === "semua" || jenis === tipe)) {
+      kampus.style.display = "block";
+    } else {
+      kampus.style.display = "none";
+    }
+  });
+}
+</script>
 </body>
 </html>
